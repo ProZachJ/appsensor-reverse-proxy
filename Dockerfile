@@ -16,16 +16,14 @@ ENV resources-file=testdata/sample-resources.yml
 
 RUN go get github.com/tools/godep
 
-# work around for permission error when ADD creates directories that binary is in
-RUN mkdir /go && mkdir /go/src
 WORKDIR /go/src/appsensor-reverse-proxy
 COPY ..
 RUN godep restore
 RUN go install
 
 # add config files
-ADD $resource-verbs-mapping-file /tmp/resource-verbs-mapping.xml
-ADD $resources-file /tmp/resources.yml
+COPY $resource-verbs-mapping-file /tmp/resource-verbs-mapping.xml
+COPY $resources-file /tmp/resources.yml
 
 # cli args can be sent through as expected
 ENTRYPOINT ["/go/bin/proxy", "-resource-verbs-mapping-file=/tmp/resource-verbs-mapping.xml", "-resources-file=/tmp/resources.yml"]
