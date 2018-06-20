@@ -9,14 +9,14 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/blocks"
-	"github.com/jtmelton/appsensor-reverse-proxy/connections"
-	"github.com/jtmelton/appsensor-reverse-proxy/ids"
-	"github.com/jtmelton/appsensor-reverse-proxy/middleware"
+	"appsensor-reverse-proxy/blocks"
+	"appsensor-reverse-proxy/connections"
+	"appsensor-reverse-proxy/ids"
+	"appsensor-reverse-proxy/middleware"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/gorilla/context"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/justinas/alice"
+	"github.com/golang/glog"
+	"github.com/gorilla/context"
+	"github.com/justinas/alice"
 )
 
 type Prox struct {

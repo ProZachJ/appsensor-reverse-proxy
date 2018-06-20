@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/jtmelton/appsensor-reverse-proxy",
+	"ImportPath": "github.com/ProZachJ/appsensor-reverse-proxy",
 	"GoVersion": "go1.5.1",
 	"Packages": [
 		"./..."

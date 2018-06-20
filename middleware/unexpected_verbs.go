@@ -9,8 +9,8 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"github.com/Workiva/go-datastructures/set"
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/ids"
+	"github.com/golang/glog"
+	"appsensor-reverse-proxy/ids"
 )
 
 // this functionality covers the situation where a valid HTTP verb is used in an

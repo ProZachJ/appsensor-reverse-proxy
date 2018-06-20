@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/connections"
+	"github.com/golang/glog"
+	"appsensor-reverse-proxy/connections"
 )
 
 const (
