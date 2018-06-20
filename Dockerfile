@@ -14,9 +14,8 @@ ENV APPSENSOR_CLIENT_APPLICATION_IP_ADDRESS=127.0.0.1
 ENV resource-verbs-mapping-file=testdata/sample-resource-verbs-mapping.yml
 ENV resources-file=testdata/sample-resources.yml
 
+WORKDIR ~/go
 RUN go get github.com/tools/godep
-
-WORKDIR /go/src/appsensor-reverse-proxy
 COPY ..
 RUN godep restore
 RUN go install
