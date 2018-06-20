@@ -14,14 +14,14 @@ ENV APPSENSOR_CLIENT_APPLICATION_IP_ADDRESS=127.0.0.1
 ENV resource-verbs-mapping-file=testdata/sample-resource-verbs-mapping.yml
 ENV resources-file=testdata/sample-resources.yml
 
+RUN go get github.com/tools/godep
 
 # work around for permission error when ADD creates directories that binary is in
 RUN mkdir /go && mkdir /go/src
 WORKDIR /go/src/appsensor-reverse-proxy
 COPY ..
-
-# add specially compiled binary directly
-ADD appsensor-reverse-proxy /go/bin/proxy
+RUN godep restore
+RUN go install
 
 # add config files
 ADD $resource-verbs-mapping-file /tmp/resource-verbs-mapping.xml
