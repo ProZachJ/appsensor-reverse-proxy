@@ -3,8 +3,8 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/Godeps/_workspace/src/github.com/golang/glog"
-	"github.com/jtmelton/appsensor-reverse-proxy/ids"
+	"github.com/golang/glog"
+	"appsensor-reverse-proxy/ids"
 )
 
 // this functionality covers the a completely invalid HTTP verb is used (ie. GOTO)

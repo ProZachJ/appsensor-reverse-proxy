@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jtmelton/appsensor-reverse-proxy/connections"
+	"appsensor-reverse-proxy/connections"
 	"github.com/parnurzeal/gorequest"
 )
 
